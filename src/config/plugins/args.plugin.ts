@@ -3,31 +3,31 @@ import { hideBin } from 'yargs/helpers';
 
 
 export const yarg = yargs(hideBin(process.argv))
-    .options('b',{
+    .option('b',{
         alias: 'base',
         type: 'number',
         demandOption: true,
         describe: 'Es la base de la tabla de multiplicar'
     })
-    .options('l',{
+    .option('l',{
         alias: 'limit',
         type: 'number',
         default: 10,
         describe: 'Límite de la tabla de multiplicar'
     })
-    .options('s',{
+    .option('s',{
         alias: 'show',
         type: 'boolean',
         default: false,
         describe: 'Muestra la tabla de multiplicar en consola'
     })
-    .options('n', {
+    .option('n', {
         alias: 'name',
         type: 'string',
         describe: 'Nombre del archivo',
         default: 'table'
     })
-    .options('d', {
+    .option('d', {
         alias: 'destination',
         type: 'string',
         describe: 'Ruta de destino del archivo',
